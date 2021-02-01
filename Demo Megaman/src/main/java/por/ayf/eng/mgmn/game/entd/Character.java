@@ -1,7 +1,6 @@
 package por.ayf.eng.mgmn.game.entd;
 
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -67,42 +66,42 @@ public class Character extends Element {
 	
 	private void loadImages() {
 		try {
-			this.images.put("Estatico_1", ImageIO.read(new File("src/main/resources/images/textures/characters/" + this.characterName + "_Estatico_1.png")));
-			this.images.put("Disparo_1", ImageIO.read(new File("src/main/resources/images/textures/characters/" + this.characterName + "_Disparo_1.png")));
-			this.images.put("Salto_1", ImageIO.read(new File("src/main/resources/images/textures/characters/" + this.characterName + "_Salto_1.png")));
-			this.images.put("Salto_2", ImageIO.read(new File("src/main/resources/images/textures/characters/" + this.characterName + "_Salto_2.png")));
-			this.images.put("Salto_3", ImageIO.read(new File("src/main/resources/images/textures/characters/" + this.characterName + "_Salto_3.png")));
-			this.images.put("Salto_4", ImageIO.read(new File("src/main/resources/images/textures/characters/" + this.characterName + "_Salto_4.png")));
-			this.images.put("DSalto_1", ImageIO.read(new File("src/main/resources/images/textures/characters/" + this.characterName + "_DSalto_1.png")));
-			this.images.put("DSalto_2", ImageIO.read(new File("src/main/resources/images/textures/characters/" + this.characterName + "_DSalto_2.png")));
-			this.images.put("DSalto_3", ImageIO.read(new File("src/main/resources/images/textures/characters/" + this.characterName + "_DSalto_3.png")));
-			this.images.put("DSalto_4", ImageIO.read(new File("src/main/resources/images/textures/characters/" + this.characterName + "_DSalto_4.png")));
-			this.images.put("Lose", ImageIO.read(new File("src/main/resources/images/textures/characters/" + this.characterName + "_Lose.png")));
-			this.images.put("Win", ImageIO.read(new File("src/main/resources/images/textures/characters/" + this.characterName + "_Win.png")));
+			this.images.put("Estatico_1", ImageIO.read(getClass().getResource("/images/textures/characters/" + this.characterName + "_Estatico_1.png")));
+			this.images.put("Disparo_1", ImageIO.read(getClass().getResource("/images/textures/characters/" + this.characterName + "_Disparo_1.png")));
+			this.images.put("Salto_1", ImageIO.read(getClass().getResource("/images/textures/characters/" + this.characterName + "_Salto_1.png")));
+			this.images.put("Salto_2", ImageIO.read(getClass().getResource("/images/textures/characters/" + this.characterName + "_Salto_2.png")));
+			this.images.put("Salto_3", ImageIO.read(getClass().getResource("/images/textures/characters/" + this.characterName + "_Salto_3.png")));
+			this.images.put("Salto_4", ImageIO.read(getClass().getResource("/images/textures/characters/" + this.characterName + "_Salto_4.png")));
+			this.images.put("DSalto_1", ImageIO.read(getClass().getResource("/images/textures/characters/" + this.characterName + "_DSalto_1.png")));
+			this.images.put("DSalto_2", ImageIO.read(getClass().getResource("/images/textures/characters/" + this.characterName + "_DSalto_2.png")));
+			this.images.put("DSalto_3", ImageIO.read(getClass().getResource("/images/textures/characters/" + this.characterName + "_DSalto_3.png")));
+			this.images.put("DSalto_4", ImageIO.read(getClass().getResource("/images/textures/characters/" + this.characterName + "_DSalto_4.png")));
+			this.images.put("Lose", ImageIO.read(getClass().getResource("/images/textures/characters/" + this.characterName + "_Lose.png")));
+			this.images.put("Win", ImageIO.read(getClass().getResource("/images/textures/characters/" + this.characterName + "_Win.png")));
 
 			if(this.characterName.equals("Megaman")) {
-				this.images.put("Movimiento_1", ImageIO.read(new File("src/main/resources/images/textures/characters/" + this.characterName + "_Movimiento_1.png")));
-				this.images.put("Movimiento_2", ImageIO.read(new File("src/main/resources/images/textures/characters/" + this.characterName + "_Movimiento_2.png")));
-				this.images.put("Movimiento_3", ImageIO.read(new File("src/main/resources/images/textures/characters/" + this.characterName + "_Movimiento_3.png")));
-				this.images.put("Movimiento_4", ImageIO.read(new File("src/main/resources/images/textures/characters/" + this.characterName + "_Movimiento_4.png")));
-				this.images.put("Movimiento_5", ImageIO.read(new File("src/main/resources/images/textures/characters/" + this.characterName + "_Movimiento_5.png")));
-				this.images.put("Movimiento_6", ImageIO.read(new File("src/main/resources/images/textures/characters/" + this.characterName + "_Movimiento_6.png")));
-				this.images.put("Movimiento_7", ImageIO.read(new File("src/main/resources/images/textures/characters/" + this.characterName + "_Movimiento_7.png")));
-				this.images.put("Movimiento_8", ImageIO.read(new File("src/main/resources/images/textures/characters/" + this.characterName + "_Movimiento_8.png")));
-				this.images.put("Movimiento_9", ImageIO.read(new File("src/main/resources/images/textures/characters/" + this.characterName + "_Movimiento_9.png")));
-				this.images.put("Movimiento_10", ImageIO.read(new File("src/main/resources/images/textures/characters/" + this.characterName + "_Movimiento_10.png")));
-				this.images.put("Deslizar_1", ImageIO.read(new File("src/main/resources/images/textures/characters/" + this.characterName + "_Deslizar_1.png")));
-				this.images.put("DMovimiento_1", ImageIO.read(new File("src/main/resources/images/textures/characters/" + this.characterName + "_DMovimiento_1.png")));
-				this.images.put("DMovimiento_2", ImageIO.read(new File("src/main/resources/images/textures/characters/" + this.characterName + "_DMovimiento_2.png")));
-				this.images.put("DMovimiento_3", ImageIO.read(new File("src/main/resources/images/textures/characters/" + this.characterName + "_DMovimiento_3.png")));
-				this.images.put("DMovimiento_4", ImageIO.read(new File("src/main/resources/images/textures/characters/" + this.characterName + "_DMovimiento_4.png")));
-				this.images.put("DMovimiento_5", ImageIO.read(new File("src/main/resources/images/textures/characters/" + this.characterName + "_DMovimiento_5.png")));
-				this.images.put("DMovimiento_6", ImageIO.read(new File("src/main/resources/images/textures/characters/" + this.characterName + "_DMovimiento_6.png")));
-				this.images.put("DMovimiento_7", ImageIO.read(new File("src/main/resources/images/textures/characters/" + this.characterName + "_DMovimiento_7.png")));
-				this.images.put("DMovimiento_8", ImageIO.read(new File("src/main/resources/images/textures/characters/" + this.characterName + "_DMovimiento_8.png")));
-				this.images.put("DMovimiento_9", ImageIO.read(new File("src/main/resources/images/textures/characters/" + this.characterName + "_DMovimiento_9.png")));
-				this.images.put("DMovimiento_10", ImageIO.read(new File("src/main/resources/images/textures/characters/" + this.characterName + "_DMovimiento_10.png")));
-				this.images.put("Damage", ImageIO.read(new File("src/main/resources/images/textures/characters/" + this.characterName + "_Damage.png")));
+				this.images.put("Movimiento_1", ImageIO.read(getClass().getResource("/images/textures/characters/" + this.characterName + "_Movimiento_1.png")));
+				this.images.put("Movimiento_2", ImageIO.read(getClass().getResource("/images/textures/characters/" + this.characterName + "_Movimiento_2.png")));
+				this.images.put("Movimiento_3", ImageIO.read(getClass().getResource("/images/textures/characters/" + this.characterName + "_Movimiento_3.png")));
+				this.images.put("Movimiento_4", ImageIO.read(getClass().getResource("/images/textures/characters/" + this.characterName + "_Movimiento_4.png")));
+				this.images.put("Movimiento_5", ImageIO.read(getClass().getResource("/images/textures/characters/" + this.characterName + "_Movimiento_5.png")));
+				this.images.put("Movimiento_6", ImageIO.read(getClass().getResource("/images/textures/characters/" + this.characterName + "_Movimiento_6.png")));
+				this.images.put("Movimiento_7", ImageIO.read(getClass().getResource("/images/textures/characters/" + this.characterName + "_Movimiento_7.png")));
+				this.images.put("Movimiento_8", ImageIO.read(getClass().getResource("/images/textures/characters/" + this.characterName + "_Movimiento_8.png")));
+				this.images.put("Movimiento_9", ImageIO.read(getClass().getResource("/images/textures/characters/" + this.characterName + "_Movimiento_9.png")));
+				this.images.put("Movimiento_10", ImageIO.read(getClass().getResource("/images/textures/characters/" + this.characterName + "_Movimiento_10.png")));
+				this.images.put("Deslizar_1", ImageIO.read(getClass().getResource("/images/textures/characters/" + this.characterName + "_Deslizar_1.png")));
+				this.images.put("DMovimiento_1", ImageIO.read(getClass().getResource("/images/textures/characters/" + this.characterName + "_DMovimiento_1.png")));
+				this.images.put("DMovimiento_2", ImageIO.read(getClass().getResource("/images/textures/characters/" + this.characterName + "_DMovimiento_2.png")));
+				this.images.put("DMovimiento_3", ImageIO.read(getClass().getResource("/images/textures/characters/" + this.characterName + "_DMovimiento_3.png")));
+				this.images.put("DMovimiento_4", ImageIO.read(getClass().getResource("/images/textures/characters/" + this.characterName + "_DMovimiento_4.png")));
+				this.images.put("DMovimiento_5", ImageIO.read(getClass().getResource("/images/textures/characters/" + this.characterName + "_DMovimiento_5.png")));
+				this.images.put("DMovimiento_6", ImageIO.read(getClass().getResource("/images/textures/characters/" + this.characterName + "_DMovimiento_6.png")));
+				this.images.put("DMovimiento_7", ImageIO.read(getClass().getResource("/images/textures/characters/" + this.characterName + "_DMovimiento_7.png")));
+				this.images.put("DMovimiento_8", ImageIO.read(getClass().getResource("/images/textures/characters/" + this.characterName + "_DMovimiento_8.png")));
+				this.images.put("DMovimiento_9", ImageIO.read(getClass().getResource("/images/textures/characters/" + this.characterName + "_DMovimiento_9.png")));
+				this.images.put("DMovimiento_10", ImageIO.read(getClass().getResource("/images/textures/characters/" + this.characterName + "_DMovimiento_10.png")));
+				this.images.put("Damage", ImageIO.read(getClass().getResource("/images/textures/characters/" + this.characterName + "_Damage.png")));
 			}
 		} 
 		catch (IOException e) {

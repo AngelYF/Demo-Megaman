@@ -37,7 +37,7 @@ public class ViewMainWindow extends JFrame {
 	
 	private void initComponents() {
 		this.setTitle("Demo de Megaman");
-		this.setIconImage(Toolkit.getDefaultToolkit().getImage("src/main/resources/images/icons/Icon.png"));
+		this.setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/images/icons/Icon.png")));
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(false);
 		this.setBounds(0, 0, WIDTH, HIGH);

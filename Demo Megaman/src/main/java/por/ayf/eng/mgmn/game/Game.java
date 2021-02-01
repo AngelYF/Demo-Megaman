@@ -7,7 +7,6 @@ import java.awt.Graphics2D;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.sound.sampled.Clip;
@@ -953,7 +952,7 @@ public class Game extends Canvas {
 	
 	private void loadMap(String name) {
 		try {
-			this.map.setMap(ImageIO.read(new File("src/main/resources/images/textures/map/" + name)));
+			this.map.setMap(ImageIO.read(getClass().getResource("/images/textures/map/" + name)));
 		} 
 		catch (IOException e) {
 			e.printStackTrace();
@@ -966,11 +965,11 @@ public class Game extends Canvas {
 	
 	private void loadElements() {
 		try {
-			this.contentMegaman = ImageIO.read(new File("src/main/resources/images/textures/miscellaneous/Contenedor.png"));
-			this.contentBass = ImageIO.read(new File("src/main/resources/images/textures/miscellaneous/Contenedor_Bass.png"));
-			this.bufferedImageWin = ImageIO.read(new File("src/main/resources/images/textures/miscellaneous/Win.png"));
-			this.bufferedImageLose = ImageIO.read(new File("src/main/resources/images/textures/miscellaneous/Lose.png"));
-			this.bufferedImageLife = ImageIO.read(new File("src/main/resources/images/textures/miscellaneous/Vida.png"));
+			this.contentMegaman = ImageIO.read(getClass().getResource("/images/textures/miscellaneous/Contenedor.png"));
+			this.contentBass = ImageIO.read(getClass().getResource("/images/textures/miscellaneous/Contenedor_Bass.png"));
+			this.bufferedImageWin = ImageIO.read(getClass().getResource("/images/textures/miscellaneous/Win.png"));
+			this.bufferedImageLose = ImageIO.read(getClass().getResource("/images/textures/miscellaneous/Lose.png"));
+			this.bufferedImageLife = ImageIO.read(getClass().getResource("/images/textures/miscellaneous/Vida.png"));
 		} 
 		catch (IOException e) {
 			e.printStackTrace();

@@ -1,6 +1,5 @@
 package por.ayf.eng.mgmn.game.entd;
 
-import java.io.File;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
@@ -21,7 +20,7 @@ public class Projectile extends Element {
 		this.position = position;
 		
 		try {
-			this.currentImage = ImageIO.read(new File("src/main/resources/images/textures/objects/" + url));
+			this.currentImage = ImageIO.read(getClass().getResource("/images/textures/objects/" + url));
 		} 
 		catch (IOException e) {
 			e.printStackTrace();
