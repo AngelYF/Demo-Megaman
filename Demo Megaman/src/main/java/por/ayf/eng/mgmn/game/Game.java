@@ -18,6 +18,7 @@ import por.ayf.eng.mgmn.game.entd.Projectile;
 import por.ayf.eng.mgmn.game.map.Map;
 import por.ayf.eng.mgmn.game.phys.Collision;
 import por.ayf.eng.mgmn.game.render.Animation;
+import por.ayf.eng.mgmn.util.Util;
 import por.ayf.eng.mgmn.view.ViewMainWindow;
 
 /**
@@ -170,8 +171,7 @@ public class Game extends Canvas {
 			if(this.blinkM == 0) {
 				this.blinkM++;
 				characterGraphic.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.6f));
-			}
-			else {
+			} else {
 				this.blinkM--;
 			}
 		}
@@ -180,8 +180,7 @@ public class Game extends Canvas {
 		if(this.megaman.getPosition() == 0) {
 			characterGraphic.rotate(Math.toRadians(180.0), width/2.0, height/2.0);
 			characterGraphic.drawImage(this.megaman.getCurrentImage(), 0, 0, width, height, 0, height, width, 0, null);
-		}
-		else {	// If I look to the right, paint it normal.
+		} else {	// If I look to the right, paint it normal.
 			characterGraphic.drawImage(this.megaman.getCurrentImage(), 0, 0, null);
 		}	
 		
@@ -199,8 +198,7 @@ public class Game extends Canvas {
 			if(this.blinkB == 0) {
 				this.blinkB++;
 				characterGraphic.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.6f));
-			}
-			else {
+			} else {
 				this.blinkB--;
 			}
 		}
@@ -209,8 +207,7 @@ public class Game extends Canvas {
 		if(this.bass.getPosition() == 0) {
 			characterGraphic.rotate(Math.toRadians(180.0), width/2.0, height/2.0);
 			characterGraphic.drawImage(this.bass.getCurrentImage(), 0, 0, width, height, 0, height, width, 0, null);
-		}
-		else {	// If I look to the right, paint it normal.
+		} else {	// If I look to the right, paint it normal.
 			characterGraphic.drawImage(this.bass.getCurrentImage(), 0, 0, null);
 		}	
 		
@@ -275,8 +272,7 @@ public class Game extends Canvas {
 		// If there is a Game Over, draw that I lose, else that I win.
 		if(this.gameOver == true) {
 			graphics.drawImage(this.bufferedImageLose, this.map.getXPositionCamera() + 120, this.map.getYPositionCamera() + 100, null);
-		}
-		else {
+		} else {
 			graphics.drawImage(this.bufferedImageWin, this.map.getXPositionCamera() + 120, this.map.getYPositionCamera() + 100, null);
 		}
 	}
@@ -421,8 +417,7 @@ public class Game extends Canvas {
 		
 		if(this.megaman.getPosition() == 0) {
 			projectile = new Projectile(this.megaman.getPos_X() - 12, this.megaman.getYPosition() + 40, this.megaman.getPosition(), "Disparo_Megaman.png");
-		}
-		else if(this.megaman.getPosition() == 1) {
+		} else if(this.megaman.getPosition() == 1) {
 			projectile = new Projectile(this.megaman.getPos_X() + this.megaman.getCurrentImage().getWidth(), this.megaman.getYPosition() + 40, this.megaman.getPosition(), "Disparo_Megaman.png");
 		}
 		
@@ -453,8 +448,7 @@ public class Game extends Canvas {
 		// If I'm shooting, put static the image of the shoot, else the standing one.
 		if(this.megaman.getShooting() == true) {
 			this.megaman.setCurrentImage(this.megaman.getImages().get("Disparo_1"));	
-		}
-		else {
+		} else {
 			this.megaman.setCurrentImage(this.megaman.getImages().get("Estatico_1"));	
 		}
 		
@@ -548,8 +542,7 @@ public class Game extends Canvas {
 		
 		if(this.bass.getPosition() == 0) {
 			projectile = new Projectile(this.bass.getPos_X() - 35, this.bass.getYPosition() + 40, this.bass.getPosition(), "Disparo_Bass.png");
-		}
-		else if(this.bass.getPosition() == 1) {
+		} else if(this.bass.getPosition() == 1) {
 			projectile = new Projectile(this.bass.getPos_X() + this.bass.getCurrentImage().getWidth(), this.bass.getYPosition() + 40, this.bass.getPosition(), "Disparo_Bass.png");
 		}
 		
@@ -645,8 +638,7 @@ public class Game extends Canvas {
 					megaman.setYPosition(megaman.getYPosition() + 6);
 					megaman.setCurrentImage(megaman.getImages().get("Lose"));
 					Audio.playSound(clipSound, "Lose.wav");
-				}
-				else {
+				} else {
 					bass.setCurrentImage(bass.getImages().get("Lose"));
 					megaman.setCurrentImage(megaman.getImages().get("Win"));
 					Audio.playSound(clipSound, "Win.wav");
@@ -704,8 +696,7 @@ public class Game extends Canvas {
 				if(megaman.getFalling() == true && megaman.getYPosition() >= 330 && megaman.getYPosition() <= 353) {
 					if(megaman.getShooting() == true) {
 						megaman.setCurrentImage(megaman.getImages().get("DSalto_1"));
-					}
-					else {
+					} else {
 						megaman.setCurrentImage(megaman.getImages().get("Salto_1"));
 					}
 				}
@@ -730,8 +721,7 @@ public class Game extends Canvas {
 				if(bass.getFalling() == true && bass.getYPosition() >= 306 && bass.getYPosition() <= 329) {
 					if(bass.getShooting() == true) {
 						bass.setCurrentImage(bass.getImages().get("DSalto_1"));
-					}
-					else {
+					} else {
 						bass.setCurrentImage(bass.getImages().get("Salto_1"));
 					}
 				}
@@ -748,8 +738,7 @@ public class Game extends Canvas {
 					if(Collision.projectileToSceneCollision(projectile, map)) {
 						megaman.getProjectiles().remove(i);
 						continue;
-					}
-					else {
+					} else {
 						projectile.setXPosition(projectile.getPos_X() + projectile.getXSpeed());
 						projectile.setYPosition(projectile.getYPosition() + projectile.getYSpeed());
 					}
@@ -761,8 +750,7 @@ public class Game extends Canvas {
 					if(Collision.projectileToSceneCollision(projectile, map)) {
 						bass.getProjectiles().remove(i);
 						continue;
-					}
-					else {
+					} else {
 						projectile.setXPosition(projectile.getPos_X() + projectile.getXSpeed());
 						projectile.setYPosition(projectile.getYPosition() + projectile.getYSpeed());
 					}
@@ -813,12 +801,10 @@ public class Game extends Canvas {
 				if(megaman.getFalling() == true) {
 					if(megaman.getYSpeed() < 16) {
 						megaman.setYSpeed(megaman.getYSpeed() + 3);
-					}
-					else {
+					} else {
 						megaman.setYSpeed(16);
 					}
-				}
-				else {
+				} else {
 					megaman.setYSpeed(-12);
 				}
 		    }
@@ -836,12 +822,10 @@ public class Game extends Canvas {
 				if(bass.getFalling() == true) {
 					if(bass.getYSpeed() < 16) {
 						bass.setYSpeed(bass.getYSpeed() + 3);
-					}
-					else {
+					} else {
 						bass.setYSpeed(16);
 					}
-				}
-				else {
+				} else {
 					bass.setYSpeed(-12);
 				}
 		    }
@@ -877,8 +861,7 @@ public class Game extends Canvas {
 			public void actionPerformed(ActionEvent event) {
 				if(megaman.getInAir() == false) {
 					megaman.setCurrentImage(megaman.getImages().get("Estatico_1"));
-				}
-				else {
+				} else {
 					megaman.setCurrentImage(megaman.getImages().get("Salto_4"));
 				}
 				
@@ -900,8 +883,7 @@ public class Game extends Canvas {
 			public void actionPerformed(ActionEvent event) {
 				if(bass.getInAir() == false) {
 					bass.setCurrentImage(bass.getImages().get("Estatico_1"));
-				}
-				else if(bass.getCurrentImage() == bass.getImages().get("DSalto_4")) {
+				} else if(bass.getCurrentImage() == bass.getImages().get("DSalto_4")) {
 					bass.setCurrentImage(bass.getImages().get("Salto_4"));
 				}
 				
@@ -935,8 +917,7 @@ public class Game extends Canvas {
 					
 					if(megaman.getInAir() == false) {
 						shootBass();
-					}
-					else {
+					} else {
 						jumpBass();
 					}	
 				}
@@ -953,9 +934,8 @@ public class Game extends Canvas {
 	private void loadMap(String name) {
 		try {
 			this.map.setMap(ImageIO.read(getClass().getResource("/images/textures/map/" + name)));
-		} 
-		catch (IOException e) {
-			e.printStackTrace();
+		} catch (IOException ex) {
+			Util.logMessage(Util.LEVEL_ERROR, "Ha ocurrido un error al leer una textura.", Game.class, ex);
 		}	
 	}
 	
@@ -970,9 +950,8 @@ public class Game extends Canvas {
 			this.bufferedImageWin = ImageIO.read(getClass().getResource("/images/textures/miscellaneous/Win.png"));
 			this.bufferedImageLose = ImageIO.read(getClass().getResource("/images/textures/miscellaneous/Lose.png"));
 			this.bufferedImageLife = ImageIO.read(getClass().getResource("/images/textures/miscellaneous/Vida.png"));
-		} 
-		catch (IOException e) {
-			e.printStackTrace();
+		} catch (IOException ex) {
+			Util.logMessage(Util.LEVEL_ERROR, "Ha ocurrido un error al leer una textura.", Game.class, ex);
 		}	
 	}
 	

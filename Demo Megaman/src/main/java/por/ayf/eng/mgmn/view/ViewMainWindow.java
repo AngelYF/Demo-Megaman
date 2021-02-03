@@ -69,8 +69,7 @@ public class ViewMainWindow extends JFrame {
 		        			if(game.getSPressed() == false) {
 		        				game.shootMegaman();
 		        			}	
-		        		}
-		        		else if(keys.contains(KeyEvent.VK_A) && keys.contains(KeyEvent.VK_RIGHT) && keys.contains(KeyEvent.VK_S)) {	// RIGHT JUMP WHILE IS SHOOTING
+		        		} else if(keys.contains(KeyEvent.VK_A) && keys.contains(KeyEvent.VK_RIGHT) && keys.contains(KeyEvent.VK_S)) {	// RIGHT JUMP WHILE IS SHOOTING
 		        			if(game.getMegaman().getInAir() == false && game.getAPressed() == false) {
 		        				game.jumpMegaman();
 		        			}
@@ -80,27 +79,23 @@ public class ViewMainWindow extends JFrame {
 		        			if(game.getSPressed() == false) {
 		        				game.shootMegaman();
 		        			}	
-		        		}
-		        		else if(keys.contains(KeyEvent.VK_A) && keys.contains(KeyEvent.VK_DOWN)) {	// SLIDE
+		        		} else if(keys.contains(KeyEvent.VK_A) && keys.contains(KeyEvent.VK_DOWN)) {	// SLIDE
 		        			if(game.getMegaman().getInAir() == false && game.getAPressed() == false && game.getMegaman().getSliding() == false) {
 		        				game.slideMegaman();
 		        			}
-		        		}
-		        		else if(keys.contains(KeyEvent.VK_A) && keys.contains(KeyEvent.VK_LEFT)) {	// LEFT JUMP
+		        		} else if(keys.contains(KeyEvent.VK_A) && keys.contains(KeyEvent.VK_LEFT)) {	// LEFT JUMP
 		        			if(game.getMegaman().getInAir() == false && game.getAPressed() == false) {
 		        				game.jumpMegaman();
 		        			}
 		        			
 		        			game.moveMegaman(0);
-		        		}
-		        		else if(keys.contains(KeyEvent.VK_A) && keys.contains(KeyEvent.VK_RIGHT)) {	// RIGHT JUMP
+		        		} else if(keys.contains(KeyEvent.VK_A) && keys.contains(KeyEvent.VK_RIGHT)) {	// RIGHT JUMP
 		        			if(game.getMegaman().getInAir() == false && game.getAPressed() == false) {
 		        				game.jumpMegaman();
 		        			}
 		        			
 		        			game.moveMegaman(1);
-		        		}
-		        		else if(keys.contains(KeyEvent.VK_A) && keys.contains(KeyEvent.VK_S)) {	// JUMP WHILE IS SHOOTING
+		        		} else if(keys.contains(KeyEvent.VK_A) && keys.contains(KeyEvent.VK_S)) {	// JUMP WHILE IS SHOOTING
 		        			if(game.getMegaman().getInAir() == false && game.getAPressed() == false) {
 		        				game.jumpMegaman();
 		        			}
@@ -108,33 +103,27 @@ public class ViewMainWindow extends JFrame {
 		        			if(game.getSPressed() == false) {
 		        				game.shootMegaman();
 		        			}	
-		        		}
-		        		else if(keys.contains(KeyEvent.VK_RIGHT) && keys.contains(KeyEvent.VK_S)) {	// RIGHT MOVE WHILE IS SHOOTING
+		        		} else if(keys.contains(KeyEvent.VK_RIGHT) && keys.contains(KeyEvent.VK_S)) {	// RIGHT MOVE WHILE IS SHOOTING
 		        			game.moveMegaman(1);
 		        			
 		        			if(game.getSPressed() == false) {
 		        				game.shootMegaman();
 		        			}	
-		        		}
-		        		else if(keys.contains(KeyEvent.VK_LEFT) && keys.contains(KeyEvent.VK_S)) { // LEFT MOVE WHILE IS SHOOTING
+		        		} else if(keys.contains(KeyEvent.VK_LEFT) && keys.contains(KeyEvent.VK_S)) { // LEFT MOVE WHILE IS SHOOTING
 		        			game.moveMegaman(0);
 		        			
 		        			if(game.getSPressed() == false) {
 		        				game.shootMegaman();
 		        			}	
-		        		}
-		        		else if(keys.contains(KeyEvent.VK_LEFT)) { // LEFT MOVE
+		        		} else if(keys.contains(KeyEvent.VK_LEFT)) { // LEFT MOVE
 		        			game.moveMegaman(0);
-		        		}
-		        		else if(keys.contains(KeyEvent.VK_RIGHT)) { // RIGHT MOVE
+		        		} else if(keys.contains(KeyEvent.VK_RIGHT)) { // RIGHT MOVE
 		        			game.moveMegaman(1);
-		        		}
-		        		else if(keys.contains(KeyEvent.VK_A)) {	// JUMP
+		        		} else if(keys.contains(KeyEvent.VK_A)) {	// JUMP
 		        			if(game.getMegaman().getInAir() == false && game.getAPressed() == false) {
 		        				game.jumpMegaman();
 		        			}
-		        		}
-		        		else if(keys.contains(KeyEvent.VK_S)) {	// SHOOT
+		        		} else if(keys.contains(KeyEvent.VK_S)) {	// SHOOT
 		        			if(game.getSPressed() == false) {
 		        				game.shootMegaman();
 		        			}
@@ -151,12 +140,10 @@ public class ViewMainWindow extends JFrame {
 		        	if(evt.getKeyCode() == KeyEvent.VK_LEFT || evt.getKeyCode() == KeyEvent.VK_RIGHT) { // STOP
 		        		if(game.getMegaman().getInAir() == false) {
 		        			game.stopMegaman();
-		        		}
-		        		else {
+		        		} else {
 		        			game.airStopMegaman();
 		        		}
-		        	}	
-		        	else if(evt.getKeyCode() == KeyEvent.VK_A) { // JUMP
+		        	} else if(evt.getKeyCode() == KeyEvent.VK_A) { // JUMP
 		        		if(game.getMegaman().getInAir()) {
 		        			game.getMegaman().setFalling(true);
 		        		}
@@ -164,14 +151,12 @@ public class ViewMainWindow extends JFrame {
 	        			if(game.getAPressed()) {
 	        				game.setAPressed(false);
 	        			}
-	        		}
-		        	else if(evt.getKeyCode() == KeyEvent.VK_S) { // SHOOT
+	        		} else if(evt.getKeyCode() == KeyEvent.VK_S) { // SHOOT
 	        			if(game.getSPressed()) {
 	        				game.setSPressed(false);
 	        			}
 	        		}
-	        	}
-	        	else {
+	        	} else {
 	        		if(evt.getKeyCode() == KeyEvent.VK_A) {	// JUMP
 	        			if(game.getMegaman().getInAir()) {
 	        				game.getMegaman().setFalling(true);
@@ -180,23 +165,18 @@ public class ViewMainWindow extends JFrame {
 	        			if(game.getAPressed()) {
 	        				game.setAPressed(false);
 	        			}
-	        		}
-	        		else if(evt.getKeyCode() == KeyEvent.VK_S) { // SHOOT
+	        		} else if(evt.getKeyCode() == KeyEvent.VK_S) { // SHOOT
 	        			if(game.getSPressed()) {
 	        				game.setSPressed(false);
 	        			}
-	        		}
-	        		else if(evt.getKeyCode() == KeyEvent.VK_LEFT && keys.contains(KeyEvent.VK_RIGHT)) {	// SI HE SOLTADO LA IZQUIERDA, PERO PERMANCE LA DERECHA
+	        		} else if(evt.getKeyCode() == KeyEvent.VK_LEFT && keys.contains(KeyEvent.VK_RIGHT)) {	// SI HE SOLTADO LA IZQUIERDA, PERO PERMANCE LA DERECHA
 	        			game.moveMegaman(1);
-	        		}
-	        		else if(evt.getKeyCode() == KeyEvent.VK_RIGHT && keys.contains(KeyEvent.VK_LEFT)) {	// SI HE SOLTADO LA DERECHA, PERO PERMANCE LA IZQUIERDA
+	        		} else if(evt.getKeyCode() == KeyEvent.VK_RIGHT && keys.contains(KeyEvent.VK_LEFT)) {	// SI HE SOLTADO LA DERECHA, PERO PERMANCE LA IZQUIERDA
 	        			game.moveMegaman(0);
-	        		}
-	        		else if(evt.getKeyCode() == KeyEvent.VK_LEFT || evt.getKeyCode() == KeyEvent.VK_RIGHT) { // STOP
+	        		} else if(evt.getKeyCode() == KeyEvent.VK_LEFT || evt.getKeyCode() == KeyEvent.VK_RIGHT) { // STOP
 	        			if(game.getMegaman().getInAir() == false && game.getMegaman().getSliding() == false) {
 		        			game.stopMegaman();
-		        		}
-		        		else {
+		        		} else {
 		        			if(game.getMegaman().getInAir()) {
 		        				game.airStopMegaman();
 		        			}

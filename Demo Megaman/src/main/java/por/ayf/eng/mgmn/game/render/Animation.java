@@ -20,89 +20,68 @@ public class Animation {
 		if(megaman.getCurrentImage() == megaman.getImages().get("Estatico_1") || megaman.getCurrentImage() == megaman.getImages().get("Deslizar_1") || megaman.getCurrentImage() == megaman.getImages().get("Disparo_1")) {
 			if(shooting == true) {
 				megaman.setCurrentImage(megaman.getImages().get("DMovimiento_1"));
-			}
-			else {
+			} else {
 				megaman.setCurrentImage(megaman.getImages().get("Movimiento_1"));
 			}
-		}
-		else {
+		} else {
 			if(megaman.getCurrentImage() == megaman.getImages().get("Movimiento_1") || megaman.getCurrentImage() == megaman.getImages().get("DMovimiento_1")) {
 				if(shooting == true) {
 					megaman.setCurrentImage(megaman.getImages().get("DMovimiento_2"));
-				}
-				else {
+				} else {
 					megaman.setCurrentImage(megaman.getImages().get("Movimiento_2"));
 				}
-			}
-			else if(megaman.getCurrentImage() == megaman.getImages().get("Movimiento_2") || megaman.getCurrentImage() == megaman.getImages().get("DMovimiento_2")) {
+			} else if(megaman.getCurrentImage() == megaman.getImages().get("Movimiento_2") || megaman.getCurrentImage() == megaman.getImages().get("DMovimiento_2")) {
 				if(shooting == true) {
 					megaman.setCurrentImage(megaman.getImages().get("DMovimiento_3"));
-				}
-				else {
+				} else {
 					megaman.setCurrentImage(megaman.getImages().get("Movimiento_3"));
 				}
-			}
-			else if(megaman.getCurrentImage() == megaman.getImages().get("Movimiento_3") || megaman.getCurrentImage() == megaman.getImages().get("DMovimiento_3")) {
+			} else if(megaman.getCurrentImage() == megaman.getImages().get("Movimiento_3") || megaman.getCurrentImage() == megaman.getImages().get("DMovimiento_3")) {
 				if(shooting == true) {
 					megaman.setCurrentImage(megaman.getImages().get("DMovimiento_4"));
-				}
-				else {
+				} else {
 					megaman.setCurrentImage(megaman.getImages().get("Movimiento_4"));
 				}		
-			}
-			else if(megaman.getCurrentImage() == megaman.getImages().get("Movimiento_4") || megaman.getCurrentImage() == megaman.getImages().get("DMovimiento_4")) {
+			} else if(megaman.getCurrentImage() == megaman.getImages().get("Movimiento_4") || megaman.getCurrentImage() == megaman.getImages().get("DMovimiento_4")) {
 				if(shooting == true) {
 					megaman.setCurrentImage(megaman.getImages().get("DMovimiento_5"));
-				}
-				else {
+				} else {
 					megaman.setCurrentImage(megaman.getImages().get("Movimiento_5"));
 				}
-			}
-			else if(megaman.getCurrentImage() == megaman.getImages().get("Movimiento_5") || megaman.getCurrentImage() == megaman.getImages().get("DMovimiento_5")) {
+			} else if(megaman.getCurrentImage() == megaman.getImages().get("Movimiento_5") || megaman.getCurrentImage() == megaman.getImages().get("DMovimiento_5")) {
 				if(shooting == true) {
 					megaman.setCurrentImage(megaman.getImages().get("DMovimiento_6"));
-				}
-				else {
+				} else {
 					megaman.setCurrentImage(megaman.getImages().get("Movimiento_6"));
 				}
-			}
-			else if(megaman.getCurrentImage() == megaman.getImages().get("Movimiento_6") || megaman.getCurrentImage() == megaman.getImages().get("DMovimiento_6")) {
+			} else if(megaman.getCurrentImage() == megaman.getImages().get("Movimiento_6") || megaman.getCurrentImage() == megaman.getImages().get("DMovimiento_6")) {
 				if(shooting == true) {
 					megaman.setCurrentImage(megaman.getImages().get("DMovimiento_7"));
-				}
-				else {
+				} else {
 					megaman.setCurrentImage(megaman.getImages().get("Movimiento_7"));
 				}
-			}
-			else if(megaman.getCurrentImage() == megaman.getImages().get("Movimiento_7") || megaman.getCurrentImage() == megaman.getImages().get("DMovimiento_7")) {
+			} else if(megaman.getCurrentImage() == megaman.getImages().get("Movimiento_7") || megaman.getCurrentImage() == megaman.getImages().get("DMovimiento_7")) {
 				if(shooting == true) {
 					megaman.setCurrentImage(megaman.getImages().get("DMovimiento_8"));
-				}
-				else {
+				} else {
 					megaman.setCurrentImage(megaman.getImages().get("Movimiento_8"));
 				}
-			}
-			else if(megaman.getCurrentImage() == megaman.getImages().get("Movimiento_8") || megaman.getCurrentImage() == megaman.getImages().get("DMovimiento_8")) {
+			} else if(megaman.getCurrentImage() == megaman.getImages().get("Movimiento_8") || megaman.getCurrentImage() == megaman.getImages().get("DMovimiento_8")) {
 				if(shooting == true) {
 					megaman.setCurrentImage(megaman.getImages().get("DMovimiento_9"));
-				}
-				else {
+				} else {
 					megaman.setCurrentImage(megaman.getImages().get("Movimiento_9"));
 				}
-			}
-			else if(megaman.getCurrentImage() == megaman.getImages().get("Movimiento_9") || megaman.getCurrentImage() == megaman.getImages().get("DMovimiento_9")) {
+			} else if(megaman.getCurrentImage() == megaman.getImages().get("Movimiento_9") || megaman.getCurrentImage() == megaman.getImages().get("DMovimiento_9")) {
 				if(shooting == true) {
 					megaman.setCurrentImage(megaman.getImages().get("DMovimiento_10"));
-				}
-				else {
+				} else {
 					megaman.setCurrentImage(megaman.getImages().get("Movimiento_10"));
 				}
-			}
-			else if(megaman.getCurrentImage() == megaman.getImages().get("Movimiento_10") || megaman.getCurrentImage() == megaman.getImages().get("DMovimiento_10")) {
+			} else if(megaman.getCurrentImage() == megaman.getImages().get("Movimiento_10") || megaman.getCurrentImage() == megaman.getImages().get("DMovimiento_10")) {
 				if(shooting == true) {
 					megaman.setCurrentImage(megaman.getImages().get("DMovimiento_1"));
-				}
-				else {
+				} else {
 					megaman.setCurrentImage(megaman.getImages().get("Movimiento_1"));
 				}
 			}
@@ -125,40 +104,31 @@ public class Animation {
 			
 			if(shooting == true) {
 				character.setCurrentImage(character.getImages().get("DSalto_1"));
-			}
-			else {
+			} else {
 				character.setCurrentImage(character.getImages().get("Salto_1"));
 			}
-		}	
-		else if(character.getCurrentImage() == character.getImages().get("Salto_1") || character.getCurrentImage() == character.getImages().get("DSalto_1")) {
+		} else if(character.getCurrentImage() == character.getImages().get("Salto_1") || character.getCurrentImage() == character.getImages().get("DSalto_1")) {
 			if(shooting == true) {
 				character.setCurrentImage(character.getImages().get("DSalto_2"));
-			}
-			else {
+			} else {
 				character.setCurrentImage(character.getImages().get("Salto_2"));
 			}
-		}
-		else if(character.getCurrentImage() == character.getImages().get("Salto_2") || character.getCurrentImage() == character.getImages().get("DSalto_2")) {
+		} else if(character.getCurrentImage() == character.getImages().get("Salto_2") || character.getCurrentImage() == character.getImages().get("DSalto_2")) {
 			if(shooting == true) {
 				character.setCurrentImage(character.getImages().get("DSalto_3"));
-			}
-			else {
+			} else {
 				character.setCurrentImage(character.getImages().get("Salto_3"));
 			}
-		}
-		else if(character.getCurrentImage() == character.getImages().get("Salto_3") || character.getCurrentImage() == character.getImages().get("DSalto_3")) {
+		} else if(character.getCurrentImage() == character.getImages().get("Salto_3") || character.getCurrentImage() == character.getImages().get("DSalto_3")) {
 			if(shooting == true) {
 				character.setCurrentImage(character.getImages().get("DSalto_4"));
-			}
-			else {
+			} else {
 				character.setCurrentImage(character.getImages().get("Salto_4"));
 			}
-		}
-		else if(character.getCurrentImage() == character.getImages().get("Salto_4") || character.getCurrentImage() == character.getImages().get("DSalto_4")) {
+		} else if(character.getCurrentImage() == character.getImages().get("Salto_4") || character.getCurrentImage() == character.getImages().get("DSalto_4")) {
 			if(shooting == true) {
 				character.setCurrentImage(character.getImages().get("DSalto_4"));
-			}
-			else {
+			} else {
 				character.setCurrentImage(character.getImages().get("Salto_4"));
 			}
 		}

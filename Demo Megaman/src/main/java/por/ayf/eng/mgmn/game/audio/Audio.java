@@ -3,6 +3,8 @@ package por.ayf.eng.mgmn.game.audio;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 
+import por.ayf.eng.mgmn.util.Util;
+
 /**
  *  Class will define the use of sounds in the game.
  * 
@@ -24,9 +26,8 @@ public class Audio {
 		try {
 			sound = AudioSystem.getClip();
 			sound.open(AudioSystem.getAudioInputStream(Audio.class.getResource("/sounds/" + name)));
-		} 
-		catch (Exception e) {
-			e.printStackTrace();
+		} catch (Exception ex) {
+			Util.logMessage(Util.LEVEL_ERROR, "Ha ocurrido un error al recuperar un audio.", Audio.class, ex);
 		}
 		sound.start();
 	}
@@ -44,9 +45,8 @@ public class Audio {
 		try {
 			music = AudioSystem.getClip();
 			music.open(AudioSystem.getAudioInputStream(Audio.class.getResource("/music/" + name)));
-		} 
-		catch (Exception e) {
-			e.printStackTrace();
+		} catch (Exception ex) {
+			Util.logMessage(Util.LEVEL_ERROR, "Ha ocurrido un error al recuperar un audio.", Audio.class, ex);
 		}
 		
 		music.setLoopPoints(start, end);

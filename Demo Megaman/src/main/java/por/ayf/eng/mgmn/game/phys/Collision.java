@@ -76,8 +76,7 @@ public class Collision {
 				character.setYPosition(353);
 				return true;
 			}
-		} 
-		else if(character.getCharacterName().equals("Bass")){
+		} else if(character.getCharacterName().equals("Bass")){
 			if(character.getYPosition() > 329) {
 				character.setYPosition(329);
 				return true;

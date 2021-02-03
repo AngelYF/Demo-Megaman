@@ -7,6 +7,8 @@ import java.util.HashMap;
 
 import javax.imageio.ImageIO;
 
+import por.ayf.eng.mgmn.util.Util;
+
 /**
  *  Class that define a character of the game.
  * 
@@ -103,9 +105,8 @@ public class Character extends Element {
 				this.images.put("DMovimiento_10", ImageIO.read(getClass().getResource("/images/textures/characters/" + this.characterName + "_DMovimiento_10.png")));
 				this.images.put("Damage", ImageIO.read(getClass().getResource("/images/textures/characters/" + this.characterName + "_Damage.png")));
 			}
-		} 
-		catch (IOException e) {
-			e.printStackTrace();
+		} catch (IOException ex) {
+			Util.logMessage(Util.LEVEL_ERROR, "Ha ocurrido un error al leer una textura.", Character.class, ex);
 		}
 	}
 
